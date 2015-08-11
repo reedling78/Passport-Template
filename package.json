@@ -1,0 +1,11 @@
+{
+  "name": "Passport Template",
+  "description": "",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Reed Rizzo <reedling78@gmail.com>",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
