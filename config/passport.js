@@ -43,10 +43,13 @@ module.exports = function(passport) {
             passReqToCallback : true // allows us to pass back the entire request to the callback
         },
         function(req, email, password, done) {
-
             // asynchronous
             // User.findOne wont fire unless data is sent back
             process.nextTick(function() {
+
+                if (req.body.username == '') {
+                    return done(null, false, req.flash('signupMessage', 'You neeed to enter a username.'));
+                }
 
                 // find a user whose email is the same as the forms email
                 // we are checking to see if the user trying to login already exists
@@ -66,6 +69,7 @@ module.exports = function(passport) {
 
                         // set the user's local credentials
                         newUser.local.email    = email;
+                        newUser.local.username = req.body.username;
                         newUser.local.password = newUser.generateHash(password);
 
                         // save the user

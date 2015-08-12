@@ -44,4 +44,9 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 // launch ======================================================================
 app.listen(port);
-console.log('The magic happens on port ' + port);
+console.log('------------ Node Template Started ------------');
+console.log('Express app started on port ' + port);
+// console.log('Connection string ' + config.db);
+// console.log('Running in ' + env);
+console.log('Running at http://localhost:' + port);
+console.log('-----------------------------------------------');

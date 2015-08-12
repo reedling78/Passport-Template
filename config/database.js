@@ -5,6 +5,6 @@
 // config/database.js
 module.exports = {
 
-    'url' : 'mongodb://ferni:asdf@proximus.modulusmongo.net:27017/Xym9osuq' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
+    'url' : 'mongodb://dbuser:whatever123@ds029803.mongolab.com:29803/heroku_s6jk8bc7' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
 
 };
